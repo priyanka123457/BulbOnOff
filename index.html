@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title>Turn Bulb On/Off</title>
+    <style>
+        /* Center content and use flexbox to align everything properly */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        img {
+            width: 250px; /* Image size */
+            margin-bottom: 30px; /* Space between image and buttons */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            background-color: #4CAF50; /* Green background */
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        #happyMessage {
+            color: white;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Turn the Bulb On/Off</h1>
+
+    <!-- The bulb image -->
+    <img id="bulbImage" src="https://images.freeimages.com/images/large-previews/70a/light-bulb-1-1427502.jpg" alt="Bulb Image">
+
+    <!-- Buttons to control the bulb -->
+    <button onclick="turnOn()">Turn on the bulb</button>
+    <p id="happyMessage" style="display: none;">I am happy, the bulb is on 😍😍</p>
+    <button onclick="turnOff()">Turn off the bulb</button>
+
+    <script>
+        // Function to turn on the bulb
+        function turnOn() {
+            document.getElementById('bulbImage').src = 'https://i0.wp.com/www.billfrymire.com/gallery/weblarge/incandescent-lightbulb-glow.jpg?resize=667%2C1000';
+            document.getElementById('happyMessage').style.display = 'block'; // Show the message
+        }
+
+        // Function to turn off the bulb
+        function turnOff() {
+            document.getElementById('bulbImage').src = 'https://images.freeimages.com/images/large-previews/70a/light-bulb-1-1427502.jpg';
+            document.getElementById('happyMessage').style.display = 'none'; // Hide the message
+        }
+    </script>
+
+</body>
+</html>
