@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1  id = 'a'>
+        hello world
+    </h1>
+    <button id = 'abc'>click me</button>
+
+    <!-- <script>
+
+        let getdata = document.getElementsByTagName('a');
+
+        let button1 = document.getElementById('abc');
+
+        button1.addEventListener('click',function(){
+            getdata.textContent = "by world"
+        });
+
+    </script> -->
+    <script>
+    // Get the h1 element and the button element
+const heading = document.getElementById("a");
+const button = document.getElementById("abc");
+
+// Add an event listener to the button
+button.addEventListener("click", function() {
+    heading.textContent = "New Content"; // Change the text of the h1
+    heading.style.color = "blue"
+});
+</script>
+
+    
+</body>
+</html>

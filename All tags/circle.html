@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+       div {
+            width: 200px;
+            height: 200px;
+            background-color:black; /* To make the circle visible */
+            border-radius: 50%; /* This makes the div a circle */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+    </style>
+   
+    <title>Document</title>
+</head>
+<body>
+
+    <div id = "circle">
+        box1
+    </div>
+    <button id = "chngecolor">
+        color change
+    </button>
+    <script>
+       
+       const getcircle = document.getElementById('circle');
+    const getbutton = document.getElementById('chngecolor');
+
+    // Array of colors
+    const array = ["blue", "black", "green", "red"];
+    let currentvalue = 0; // Initialize the index to 0
+
+    // Add an event listener to the button for the 'click' event
+    getbutton.addEventListener('click', function() {
+        // Set the background color of the circle to the current color in the array
+        getcircle.style.backgroundColor = array[currentvalue];
+
+        // Update the index to the next color in the array (and loop back to 0 after the last color)
+        currentvalue = (currentvalue + 1) % array.length;
+    });
+    </script>
+
+
+</body>
+</html>
